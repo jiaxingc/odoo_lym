@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="index_nav" inherit_id="website.snippets" name="Index nave">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_ciosp.nav" t-thumbnail="/theme_ciosp/static/src/img/snippets/banner.jpg" />
+        </xpath>
+    </template>
+
+    <template id="nav" name="Navegacao">
+        <section>
+            <div class="other-links">
+                <div class="container">
+                    <div class="row">
+                              
+                        <div class="col-12">
+                            <div class="other-links__items">
+                                <a href="programacao.html">Programação</a>
+                                <a href="exposicao-comercial.html">Expositores</a>
+                                <a href="loja.html">Loja</a>
+                                <a href="duvidas.html">Dúvidas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>

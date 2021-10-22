@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- <template id="theme_ciosp" name="Home">
+            <t t-call="website.layout">
+                <t t-set="additional_title">Home</t>
+                <t t-call="theme_ciosp.lym_index_template" />
+                <t t-call="lym_parceiro.lym_pre_footer" />
+            </t>
+        </template> -->
+
+        <template id="lym_index_template" name="Lym Home">
+            <t t-call="website.layout">
+                <div id="wrap">
+
+                    <section class="s-hero">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-12">
+                                    <div class="s-hero-introduction">
+                                        <h1 class="s-hero__title">
+                                            <b>Bem-vindo à plataforma exclusiva do</b>
+                                            <strong>CIOSP on-line</strong>
+                                        </h1>
+                                        <p class="s-hero__description">Um congresso totalmente digital e inovador para você adquirir conhecimento, atualização científica e conferir as novidades do setor odontológico.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <main class="featured">
+                        <t t-if="palestras">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12 col-lg-4">
+                                        <div class="featured-introduction">
+                                            <span class="highlighter">Acontecendo agora</span>
+                                            <h2 class="title">
+                                                <b>Assista às palestras que estão on-line</b>
+                                            </h2>
+                                            <p>Confira os horários das palestras do CIOSP on-line, programe-se para assisti-las durante a transmissão, e 
+                                          aproveite para interagir via chat com o ministrador e demais participantes. O certificado será 
+                                          disponibilizado apenas para quem assistir às palestras nos dias e horários do evento.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-8">
+                                        <div class="featured-items">
+                                            <div id="carouselIndexIndicators" class="carousel slide" data-ride="carousel">
+                                                <t t-set="count" t-value="1" />
+                                                <div class="carousel-inner">
+                                                    <t t-foreach="palestras" t-as="p">
+                                                        <div t-attf-class="carousel-item {{'active' if count == 1 else ''}}">
+                                                            <!-- <img t-if="p['image']" t-att-src="image_data_uri(p['image'])" alt="..." /> -->
+                                                            <!-- TODO Remendo solicitado pelo cliente de última hora  -->
+                                                            <!-- <t t-if="p['grade_principal'] == 'Grade oficial'"> -->
+                                                            <t t-if="p['grade_principal'] == 'Sala APCD'">
+                                                                <img src="/lym_index/static/img/sala-apcd.jpg" alt="..." />
+                                                            </t>
+                                                            <t t-elif="p['grade_principal'] == 'Sala CFO'">
+                                                                <img src="/lym_index/static/img/sala-cfo.jpg" alt="..." />
+                                                            </t>
+                                                            <t t-elif="p['grade_principal'] == 'Internacional'">
+                                                                <img src="/lym_index/static/img/internacioanl.jpg" alt="..." />
+                                                            </t>
+                                                            <div class="carousel-caption">
+                                                                <div>
+                                                                    <h5>
+                                                                        <b>
+                                                                            <t t-raw="p['grade_principal']" />
+                                                                        </b>
+                                                                    </h5>
+                                                                    <p>
+                                                                        <t t-raw="p['titulo']" />
+                                                                    </p>
+                                                                </div>
+                                                                <!--permissão -->
+                                                                <t t-if="p['permission_result'] == 'assistir'">
+                                                                    <t t-if="p['status'] == 'Ao vivo'">
+                                                                        <a t-attf-href="/programacao/assistir/{{p['id']}}" class="btn-primary">Assistir</a>
+                                                                    </t>
+                                                                    <t t-else="">
+                                                                        <a t-attf-href="/programacao/sobre/{{p['id']}}" class="btn-primary">Saiba mais</a>
+                                                                    </t>
+                                                                </t>
+                                                                <t t-elif="p['permission_result'] == 'comprar'">
+                                                                    <t t-if="p['status'] == 'Ao vivo'">
+                                                                        <a href="https://www.google.com/" class="btn-primary">Comprar</a>
+                                                                    </t>
+                                                                    <t t-else="">
+                                                                        <a t-attf-href="/programacao/sobre/{{p['id']}}" class="btn-primary">Saiba mais</a>
+                                                                    </t>
+                                                                </t>
+                                                            </div>
+                                                        </div>
+                                                        <t t-set="count" t-value="count + 1" />
+                                                    </t>
+                                                </div>
+                                                <t t-if="count > 2">
+                                                    <a class="carousel-control-prev" href="#carouselIndexIndicators" role="button" data-slide="prev">
+                                                        <i class="fa fa-arrow-left fa-3x" />
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="carousel-control-next" href="#carouselIndexIndicators" role="button" data-slide="next">
+                                                        <i class="fa fa-arrow-right fa-3x" />
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </main>
+
+                    <div class="advertising">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="publicidade__img publicidade" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="other-links">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="other-links__items">
+                                        <a href="/programacao">Programação</a>
+                                        <a href="/expositores">Expositores</a>
+                                        <a href="/loja">Loja</a>
+                                        <a href="/duvidas">Dúvidas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <!-- <link rel="stylesheet" href="/lym_css/static/src/css/app.css" />
+            <link rel="stylesheet" href="/lym_css/static/src/css/default.css" />
+            <link rel="stylesheet" href="/lym_css/static/src/css/home.css" /> -->
+        </template>
+    </data>
+</odoo>

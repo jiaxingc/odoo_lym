@@ -1,0 +1,11 @@
+header {
+    font-size: 160% !important;
+}
+
+header .navbar-brand.logo img {
+    max-width: 160px !important;
+}
+
+.js_usermenu {
+    font-size: 100% !important;
+}

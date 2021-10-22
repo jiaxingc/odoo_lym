@@ -1,0 +1,224 @@
+.partners {
+    padding: 6.4rem 0
+}
+
+.partners .title {
+    margin-bottom: 6.4rem;
+    max-width: 30rem;
+    width: 100%
+}
+
+.partners .title:after {
+    background-color: #55aeff;
+    content: "";
+    display: block;
+    height: .8rem;
+    margin-top: .8rem;
+    width: 6.4rem
+}
+
+.partners-category {
+    color: #021d49;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: .8rem;
+    text-align: center
+}
+
+.partners .partners-support {
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 1.6rem;
+    display: flex
+}
+
+.partners .partners-support .partners-item.partners {
+    border: 0;
+    margin: 0
+}
+
+.partners .partners-support .partners-item.partners:first-child {
+    padding: 4.8rem 1.6rem
+}
+
+.partners .partners-support .partners-item.partners:last-child {
+    padding: 4.8rem 4.8rem 4.8rem 0
+}
+
+.partners-item {
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 1.6rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6.4rem;
+    overflow: hidden
+}
+
+.partners-item.partners {
+    height: 20rem;
+    padding: 6.4rem
+}
+
+.partners-item.exhibitors {
+    height: 14.5rem;
+    padding: 4.8rem
+}
+
+@media (max-width:800px) {
+    .partners-item {
+        margin-bottom: 3.2rem
+    }
+    .partners-item.partners {
+        height: 16rem;
+        padding: 3.2rem
+    }
+    .partners-item.exhibitors {
+        height: 12rem;
+        padding: 2.4rem
+    }
+}
+
+@media (max-width:425px) {
+    .partners .partners-support {
+        flex-direction: column;
+        margin-bottom: 3.2rem
+    }
+    .partners .partners-support .partners-item.partners {
+        border: 0;
+        margin: 0
+    }
+    .partners .partners-support .partners-item.partners:first-child {
+        padding: 6.4rem 6.4rem 1.6rem
+    }
+    .partners .partners-support .partners-item.partners:last-child {
+        padding: 0 4.8rem 1.6rem
+    }
+    .partners-category {
+        text-align: center
+    }
+    .partners-item {
+        margin-bottom: 3.2rem
+    }
+    .partners-item.partners {
+        padding: 6.4rem
+    }
+    .partners-item.exhibitors {
+        padding: 8rem
+    }
+}
+
+.doubts {
+    padding: 6.4rem 0
+}
+
+.doubts .advertising img {
+    display: block;
+    margin: 3.2rem auto 0
+}
+
+.doubts .advertising img.mobile {
+    display: none
+}
+
+@media (max-width:800px) {
+    .doubts .advertising img.mobile {
+        display: none
+    }
+    .doubts .advertising img.desktop {
+        display: block;
+        margin: 3.2rem auto 0
+    }
+}
+
+@media (max-width:425px) {
+    .doubts .advertising img.mobile {
+        display: block;
+        margin: 3.2rem auto 0
+    }
+    .doubts .advertising img.desktop {
+        display: none
+    }
+}
+
+.doubts .title {
+    margin-bottom: 1.6rem
+}
+
+.doubts .title:after {
+    background-color: #55aeff;
+    content: "";
+    display: block;
+    height: .8rem;
+    margin-top: .8rem;
+    width: 6.4rem
+}
+
+.doubts .frequent-doubts {
+    margin-top: 3.2rem
+}
+
+.doubts .frequent-doubts__introduction {
+    text-align: center
+}
+
+.doubts .frequent-doubts__introduction .title {
+    margin-bottom: 6.4rem
+}
+
+.doubts .frequent-doubts__accordion-card {
+    background-color: #fff;
+    border: .1rem solid #dee2e6;
+    border-radius: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 1.6rem;
+    padding: 2.4rem 3.2rem
+}
+
+.doubts .frequent-doubts__accordion-card:last-child {
+    margin-bottom: 0
+}
+
+.doubts .frequent-doubts__accordion-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.doubts .frequent-doubts__accordion-header h2 {
+    color: #021d49;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    padding-right: 1.6rem
+}
+
+.doubts .frequent-doubts__accordion-header i {
+    font-size: 2.6rem
+}
+
+.doubts .frequent-doubts__accordion-header i.fa-caret-up {
+    color: #f50359
+}
+
+.doubts .frequent-doubts__accordion-header i.fa-caret-down {
+    color: #dee2e6
+}
+
+.doubts .frequent-doubts__accordion-body {
+    margin-top: 1.6rem
+}
+
+.doubts .frequent-doubts__accordion-body p:last-child {
+    margin-bottom: 0
+}
+
+.doubts .arrow,
+.doubts .arrow-rotate {
+    height: 2rem;
+    width: 2rem
+}
+
+.doubts .arrow-rotate {
+    transform: rotateX(180deg);
+    transition: all .3s
+}

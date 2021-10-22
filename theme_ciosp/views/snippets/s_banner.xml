@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="index_banner" inherit_id="website.snippets" name="Index banner">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="theme_ciosp.banner" t-thumbnail="/theme_ciosp/static/src/images/snippets/banner.jpg"/>
+        </xpath>
+    </template>
+
+    <template id="banner" name="Banner">
+        <!-- Banner section starts here -->
+        <section class="s-hero">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-12">
+                        <div class="s-hero-introduction">
+                            <h1 class="s-hero__title">
+                                <b>Bem-vindo à plataforma exclusiva do</b>
+                                <strong>CIOSP on-line</strong>
+                            </h1>
+                            <p class="s-hero__description">Um congresso totalmente digital e inovador para você adquirir conhecimento, atualização científica e conferir as novidades do setor odontológico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner section ends here -->
+    </template>
+</odoo>

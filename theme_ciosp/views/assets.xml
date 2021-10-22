@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" name="My style" inherit_id="website.assets_frontend">
+            <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/home.css"/>
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/doubts.css"/>
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/app.css"/>
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/default.css"/>
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/footer.css"/>
+            </xpath>
+        </template>
+        <!-- <template id="_assets_primary_variables" name="My SCSS variables" inherit_id="website._assets_primary_variables">
+            <xpath expr="link[last()]" position="after">
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/app.css"/>
+            </xpath>
+        </template>
+        <template id="_assets_frontend_helpers" inherit_id="website._assets_frontend_helpers">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/css" href="/theme_ciosp/static/css/default.css"/>
+            </xpath>
+        </template> -->
+    </data>
+</odoo>
